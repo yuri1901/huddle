@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*  Styles for common classes  */
+.information__subtitle {
+    font-family: "Poppins", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #00252e;
+    text-transform: capitalize;
+}
+.information__text {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #808e9a;
+}
+
+/* Default */
+
+body {
+    box-sizing: border-box;
+    background: white;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1300px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.poppins {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+.open-sans {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+}
+
+
+/*  HEADER classes */
+
+.header__section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #edfbff;
+}
+.header {
+    padding-top: 48px;
+}
+.nav {
+    margin-bottom: 71px;
+}
+.nav__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.nav__list-logo {
+    width: 200px;
+    height: 31px;
+}
+.nav__list-link {
+    padding: 13px 65px;
+    max-width: 200px;
+    border-radius: 24px;
+    box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+
+    font-size: 14px;
+    font-weight: bold;
+    color: #00252e;
+    transition: color .5s ease;
+}
+.nav__list-link:hover {
+    color: #808e9a;
+}
+.header__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+.header__content-intro {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 32px 0;
+}
+.header__content-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+}
+.header__content-text {
+    font-size: 18px;
+}
+.header__content-title,
+.header__content-text {
+    max-width: 520px;
+    color: #00252e;
+    line-height: 1.5;
+
+}
+.header__content-link {
+    width: 280px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 28px;
+    box-shadow: 2px 3px 6px 1px rgba(255, 82, 193, 0.17);
+    background-color: #ff52c1;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color .5s ease;
+}
+.header__content-link:hover {
+    background-color: #ff9adb;
+}
+.header__content-img {
+    width: 680px;
+    height: 482px;
+}
+
+/* 
+        Блок з текстом і картинкою:
+            пхду щось не то з відступом 
+        Background img - хрень    
+ */
+
+
+
+
+ /* MAIN classes */
+.main__section {
+    margin-top: 163px;
+}
+ .information__section {
+    max-width: 1232px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 33px 33px 54px 120px;
+
+    border-radius: 16px;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.07);
+    background-color: #fff;
+}
+.information__section:not(:last-child) {
+    margin-bottom: 40px;
+}
+.information__block {
+    padding-top: 160px;
+}
+.information__block-title {
+    margin-bottom: 16px;
+}
+.information__block-text {
+    max-width: 488px;
+}
+
+.information__img {
+    width: 440px;
+    height: 440px;
+}
+
+/* 
+    змінить ширину блоків тексту!!!
+
+ */
