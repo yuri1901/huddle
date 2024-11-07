@@ -249,6 +249,7 @@ body {
     line-height: 1.71;
     color: #fff;
 }
+
 .footer__info-item:not(:last-child) {
     margin-bottom: 17px;
 }
@@ -295,7 +296,6 @@ body {
     transform: translate(0%, -50%);
 }
 
-
 .footer__nav {
     display: flex;
     flex-direction: row;
@@ -308,15 +308,20 @@ body {
     margin-bottom: 12px;
 }
 .footer__nav-link {
+    position: relative;
     font-size: 14px;
     line-height: 1.93;
     color: #fff;
 }
-
-
-
-
-
+.footer__nav-link:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: white;
+}
 
 .footer__social-list {
     display: flex;
@@ -328,6 +333,9 @@ body {
     height: 31px;
     border: 1px solid #fff;
     border-radius: 50%;
+}
+.footer__social-link:hover {
+    border: 1px solid #ff52c1;
 }
 .footer__social-link--facebook, 
 .footer__social-link--twitter, 
