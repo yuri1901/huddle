@@ -2,6 +2,9 @@
 * {
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+  }
 body {
     background: white;
     font-family: "Open Sans", sans-serif;
@@ -55,12 +58,11 @@ body {
     color: #808e9a;
 }
 .header__content {
-    margin-top: 70px;
+    padding: 70px 10px 0 0;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 10px;
 }
 .header__intro-title {
     font-family: "Poppins", sans-serif;
@@ -98,12 +100,13 @@ body {
 .header__content-img {
     width: 680px;
     height: 480px;
+    background: url(../images/illustration-mockups.svg) no-repeat center/contain;
 }
 
  /* MAIN */
 
 .main {
-    margin-top: 160px;
+    padding: 160px 0 340px 0;
 }
  .information {
     max-width: 1230px;
@@ -145,17 +148,22 @@ body {
 .information__block-text--user {
     max-width: 477px;
 }
-.information__img-grow {
+.information__img-grow,
+.information__img-flowing,
+.information__img-user {
     width: 410px;
-    height: 330px;
+    height: 410px;
+    padding: 50px 20px;
+    /* Чи правильно зроблено на момент коли замість цієї картики вставлять іншу? Теж саме запитання до header-а? */
+}
+.information__img-grow {
+    background: url(../images/illustration-grow-together.svg) no-repeat center / contain;
 }
 .information__img-flowing {
-    width: 420px;
-    height: 300px;
+    background: url(../images/illustration-flowing-conversation.svg) no-repeat center / contain;
 }
 .information__img-user {
-    width: 420px;
-    height: 320px;
+    background: url(../images/illustration-your-users.svg) no-repeat center / contain;
 }
 
 /* FOOTER */
@@ -163,7 +171,6 @@ body {
 .footer {
     position: relative;
 
-    margin-top: 340px;
     padding: 140px 80px 60px 120px;
 
     background-color: #00252e;
@@ -198,7 +205,7 @@ body {
 }
 .promo__link {
     min-width: 400px;
-    height: 80px;
+    min-height: 80px;
     padding: 25px 100px;
 
     border-radius: 40px;
@@ -219,7 +226,7 @@ body {
 .footer__inner {
     padding-left: 40px;
 }
-.footer__logo {
+.footer__link {
     width: 152px;
     height: 24px;
     margin-bottom: 30px;
@@ -228,10 +235,9 @@ body {
     display: flex;
     justify-content: space-between;
 }
-.footer__info-item--location {
+.footer__info-link--location {
     max-width: 380px;
 }
-.footer__info-item,
 .footer__info-link {
     font-size: 14px;
     line-height: 1.71;
@@ -240,22 +246,22 @@ body {
 .footer__info-item:not(:last-child) {
     margin-bottom: 17px;
 }
-.footer__info-item--location,
+.footer__info-link--location,
 .footer__info-link--tel,
 .footer__info-link--mail {
     position: relative;
 }
-.footer__info-item--location::before,
+.footer__info-link--location::before,
 .footer__info-link--tel::before,
 .footer__info-link--mail::before {
     content: '';
     position: absolute;
     left: 0;
 }
-.footer__info-item--location {
+.footer__info-link--location {
     padding-left: calc(27px + 13px);
 }
-.footer__info-item--location::before {
+.footer__info-link--location::before {
     width: 13px;    
     height: 18px;
     background: url(../images/icon-location.svg) no-repeat;
@@ -282,28 +288,25 @@ body {
     top: 50%;
     transform: translate(0%, -50%);
 }
-
 .footer__nav {
     display: flex;
     gap: 140px;
+}
+.footer__nav-item {
+    line-height: 27px;
 }
 .footer__nav-item:not(:last-child) {
     margin-bottom: 12px;
 }
 .footer__nav-link {
-    position: relative;
     font-size: 14px;
-    line-height: 1.93;
+    line-height: 14px;
     color: #fff;
+    border-bottom: 1px solid transparent;
+    transition: border .5s ease;
 }
-.footer__nav-link:hover::before {
-    content: '';
-    position: absolute;
-    bottom: 20%;
-    left: 0;
-    height: 1px;
-    width: 100%;
-    background: white;
+.footer__nav-link:hover {
+    border-color: currentColor;
 }
 .footer__wrap {
     display: flex;
@@ -320,38 +323,22 @@ body {
     height: 31px;
     border: 1px solid #fff;
     border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border .5s ease;
 }
-.footer__social-link:hover {
-    border: 1px solid #ff52c1;
-}
-.footer__social-link--facebook, 
-.footer__social-link--twitter, 
-.footer__social-link--instagram {
-    position: relative;
-}
-.footer__social-link--facebook::before, 
-.footer__social-link--twitter::before, 
-.footer__social-link--instagram::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.footer__social-link--facebook::before {
-    background: url(../images/icon-facebook.svg) no-repeat;
-    width: 7px;
-    height: 15px;
-}
-.footer__social-link--twitter::before {
-    background: url(../images/icon-twitter.svg) no-repeat;
-    width: 20px;
-    height: 20px;
-}
-.footer__social-link--instagram::before {
-    background: url(../images/icon-instagram.svg) no-repeat;
+.footer__social-link svg {
     width: 15px;
     height: 15px;
+    transition: fill .5s ease;
+}
+.footer__social-link:hover {
+    border: 1px solid rgb(255, 82, 193);
+}
+.footer__social-link:hover svg {
+    fill: rgb(255, 82, 193);
 }
 .footer__copy {
     display: block;

@@ -13,16 +13,16 @@
 
  </head>
 <body>
-  <header class="header"  style="background-image: url(./images/bg-hero-desktop.svg);">
+  <header class="header" id="target"  style="background-image: url(./images/bg-hero-desktop.svg);">
     <div class="container">
       <section class="header__inner">
 
-        <nav class="header__top">
+        <div class="header__top">
           <a class="header__top-img" href="#">
             <img class="header__top-logo" src="./images/logo.svg" alt="Logo">
           </a>
           <a class="header__top-link" href="#">Try It Free</a>
-        </nav>
+        </div>
 
   
         <section class="header__content">
@@ -33,7 +33,7 @@
             </p>
             <a class="header__intro-link" href="#">Get Started For Free</a>
           </article>
-          <img class="header__content-img" src="./images/illustration-mockups.svg" alt="Illustration of the layout">
+          <div class="header__content-img" role="img" aria-label="illustration-mockups"></div>
         </section>
 
       </section>
@@ -50,11 +50,11 @@
           Think of the insightful conversations you miss out on with a feedback form. 
         </p>
       </article>
-      <img class="information__img-grow" src="./images/illustration-grow-together.svg" alt="illustration grow together">
+      <div class="information__img-grow" role="img" aria-label="illustration-grow-together"></div>
     </section>
 
     <section class="information container">
-      <img class="information__img-flowing" src="./images/illustration-flowing-conversation.svg" alt="illustration flowing conversation">
+      <div class="information__img-flowing" role="img" aria-label="illustration-flowing-conversation"></div>
       <article class="information__block">
         <h2 class="information__block-title">Flowing Conversations</h2>
         <p class="information__block-text information__block-text--flow">
@@ -72,25 +72,30 @@
           This means, once signed in to your app, your users can start chatting immediately.
         </p>
       </article>
-      <img class="information__img-user" src="./images/illustration-your-users.svg" alt="illustration your users">
+      <div class="information__img-user" role="img" aria-label="illustration-your-users"></div>
     </section>
-
 
   </main>
 
   <footer class="footer">
-    <section class="promo">
+
+    <div class="promo">
       <h2 class="promo__title">Ready To Build Your Community?</h2>
       <a href="#" class="promo__link">Get Started For Free</a>
-    </section>
+    </div>  
+
     <div class="container">
       <section class="footer__inner">
-        <img class="footer__logo" src="./images/footer-logo.svg" alt="logo">
+        <a href="#target" class="footer__link">
+          <img class="footer__logo" src="./images/footer-logo.svg" alt="">
+        </a>
         <div class="footer__content">
           <ul class="footer__info">
-            <li class="footer__info-item footer__info-item--location">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua
+            <li class="footer__info-item">
+              <a href="#" class="footer__info-link footer__info-link--location">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua
+              </a>
             </li>
             <li class="footer__info-item">
               <a class="footer__info-link footer__info-link--tel" href="tel:15431234567">+1-543-123-4567</a>
@@ -126,13 +131,19 @@
           <div class="footer__wrap">
             <ul class="footer__social-list">
               <li class="footer__social-item">
-                <a class="footer__social-link footer__social-link--facebook" href="#"></a>
+                <a class="footer__social-link footer__social-link--facebook" href="#">
+                  <svg fill="white" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30">    <path d="M12,27V15H8v-4h4V8.852C12,4.785,13.981,3,17.361,3c1.619,0,2.475,0.12,2.88,0.175V7h-2.305C16.501,7,16,7.757,16,9.291V11 h4.205l-0.571,4H16v12H12z"/></svg>
+                </a>
               </li>
               <li class="footer__social-item">
-                <a class="footer__social-link footer__social-link--twitter" href="#"></a>
+                <a class="footer__social-link footer__social-link--twitter" href="#">
+                  <svg fill="white" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M496 109.5a201.8 201.8 0 01-56.55 15.3 97.51 97.51 0 0043.33-53.6 197.74 197.74 0 01-62.56 23.5A99.14 99.14 0 00348.31 64c-54.42 0-98.46 43.4-98.46 96.9a93.21 93.21 0 002.54 22.1 280.7 280.7 0 01-203-101.3A95.69 95.69 0 0036 130.4c0 33.6 17.53 63.3 44 80.7A97.5 97.5 0 0135.22 199v1.2c0 47 34 86.1 79 95a100.76 100.76 0 01-25.94 3.4 94.38 94.38 0 01-18.51-1.8c12.51 38.5 48.92 66.5 92.05 67.3A199.59 199.59 0 0139.5 405.6a203 203 0 01-23.5-1.4A278.68 278.68 0 00166.74 448c181.36 0 280.44-147.7 280.44-275.8 0-4.2-.11-8.4-.31-12.5A198.48 198.48 0 00496 109.5z"/></svg>
+                </a>
               </li>
               <li class="footer__social-item">
-                <a class="footer__social-link footer__social-link--instagram" href="#"></a>
+                <a class="footer__social-link footer__social-link--instagram" href="#">
+                  <svg fill="white" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path  d="M349.33 69.33a93.62 93.62 0 0193.34 93.34v186.66a93.62 93.62 0 01-93.34 93.34H162.67a93.62 93.62 0 01-93.34-93.34V162.67a93.62 93.62 0 0193.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32z"/><path  d="M377.33 162.67a28 28 0 1128-28 27.94 27.94 0 01-28 28zM256 181.33A74.67 74.67 0 11181.33 256 74.75 74.75 0 01256 181.33m0-37.33a112 112 0 10112 112 112 112 0 00-112-112z"/></svg>
+                </a>
               </li>
             </ul>
             <span class="footer__copy">&copy; Copyright 2018 Huddle. All rights reserved.</span>
